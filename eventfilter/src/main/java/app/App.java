@@ -23,11 +23,11 @@ import reportparser.XMLReportParser;
 
 public class App {
 
-	private static void write(List<Report> reports) throws IOException {
+	private static void write(List<Report> reports, String folderPath) throws IOException {
 
 		
 		BufferedWriter writer = Files
-				.newBufferedWriter(Paths.get("C:/Users/Joel/Desktop/reportFiles/eventfilter-master/output.csv"));
+				.newBufferedWriter(Paths.get(folderPath + "output.csv"));
 
 		CSVPrinter csvPrinter = new CSVPrinter(writer,
 				CSVFormat.DEFAULT.withHeader("client-address", "client-guid", "request-time", "service-guid",
@@ -77,7 +77,7 @@ public class App {
 
 		Collections.sort(merged);
 
-		write(merged);
+		write(merged, folderPath);
 
 		HashMap<String, Integer> counts = new HashMap<>();
 

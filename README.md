@@ -1,8 +1,5 @@
-**
-
 ## EventFilter
 
-**
 Response to programming challenge posted [here](https://github.com/kyleboyle/eventfilter)
 
 ## How To Run:
